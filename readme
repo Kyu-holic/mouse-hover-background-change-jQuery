@@ -1,0 +1,33 @@
+:before에서 width:0 으로 주어도 없어지지 않을 때는
+overflow:hidden 을 주면 사라진다.
+
+background image를 바탕화면으로 꽉 채우는 방법
+ 
+    background: url(./images/portrait-initial.jpg) no-repeat center center;
+    background-size: cover;
+
+jQuery에서 css의 background를 바꾸기 위해 css에서 background 속성을들 독립속성으로 사용
+
+Q) 한글을 입력할 경우 글씨 하나 하나가 줄바꿈이 됩니다.
+
+한글의 경우나 띄어쓰기가 있는 경우 자동 줄바꿈이 일어납니다.
+
+그래서 자동줄바꿈을 하지 않게 white-space: nowrap; 속성을 추가하시면 됩니다.
+
+참고로 한글이 입력되면서 a와 a:before의 높이가 살짝 안맞을거에요.
+
+이런 부분을 해결하는건 a를 inline-block으로 변경해주세요. 그래서 크기값을 갖게 해주세요.
+
+a를 block으로 변경하지 않는건 a의 너비가 100%가 되는 것을 방지하기 위해서 입니다.
+
+.navi li a {
+
+  display: inline-block;
+
+}
+
+.navi li a:before {
+
+  white-space: nowrap; /* 텍스트가 넘쳐도 자동으로 줄바꿈 하지 않음 (기본값은 normal) */
+
+}
